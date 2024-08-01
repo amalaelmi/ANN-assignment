@@ -35,7 +35,7 @@ model <- neuralnet(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.W
 plot(model, rep = 'best')
 pred <- predict(model, test_data)
 model2 <- neuralnet(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 
-                    data = train_data, hidden = c(3,6,7), linear.output = FALSE)
+                    data = train_data, hidden = c(8,4,2), linear.output = FALSE)
 plot(model2, rep = 'best')
 pred2 <- predict(model2, test_data)
 model3 <- neuralnet(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 
@@ -44,7 +44,7 @@ plot(model3, rep = 'best')
 pred3 <- predict(model3, test_data)
 
 model4 <- neuralnet(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 
-                    data = train_data, hidden = c(15, 25, 35, 45, 45, 25, 15, 45, 55, 12, 22, 32, 42, 42, 22, 12, 40), 
+                    data = train_data, hidden = c(8,20,6,5,4,2,1,4,5,30)), 
                     linear.output = FALSE)
 plot(model4, rep = 'best')
 pred4 <- predict(model4, test_data)
